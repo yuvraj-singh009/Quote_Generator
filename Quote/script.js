@@ -1,5 +1,6 @@
 document.getElementById('generate-btn').addEventListener('click', function () {
     const quote = document.getElementById('quote').value.trim().split('\n');
+    const aut = document.getElementById('author').value.trim().split('\n');
     const selectedFont = document.getElementById('font-select').value;
     const selectedFontSize = document.getElementById('font-size-select').value; // Get selected font size
 
@@ -75,9 +76,9 @@ document.getElementById('generate-btn').addEventListener('click', function () {
                 });
 
                 // Add signature text below the quote
-                a=prompt("Enter author name")
+                // a=prompt("enter author name")
                 ctx.font = `${parseInt(selectedFontSize) - 8}px ${selectedFont}`; // Signature font size
-                ctx.fillText('-'+a, mobileWidth / 2, quoteYStart + (quote.length * lineHeight) + 50); // Added 50 for spacing
+                ctx.fillText('-'+aut, mobileWidth / 2, quoteYStart + (quote.length * lineHeight) + 50); // Added 50 for spacing
                 
                 // Display the generated image on the output <img> element
                 outputImage.src = canvas.toDataURL('image/png');
