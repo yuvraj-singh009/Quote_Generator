@@ -2,7 +2,7 @@ document.getElementById('generate-btn').addEventListener('click', function () {
     const quote = document.getElementById('quote').value.trim().split('\n');
     const aut = document.getElementById('author').value.trim().split('\n');
     const selectedFont = document.getElementById('font-select').value;
-    const selectedFontSize = document.getElementById('font-size-select').value; // Get selected font size
+    const selectedFontSize = document.getElementById('fontsiz').value; // Get selected font size
 
     // Check text styling options
     const isBold = document.getElementById('bold').checked;
@@ -99,4 +99,35 @@ document.getElementById('download-btn').addEventListener('click', function () {
     link.download = 'quote_image.png'; // The filename for the downloaded image
     link.href = canvas.toDataURL('image/png'); // Convert canvas to data URL
     link.click(); // Programmatically click the link to trigger download
+});
+
+//for font size
+let counter = 44;
+
+function increment() {
+  counter++;
+}
+
+function decrement() {
+  counter--;
+}
+
+function get() {
+  return counter;
+}
+
+const inc = document.getElementById("increment");
+const input = document.getElementById("fontsiz");
+const dec = document.getElementById("decrement");
+
+inc.addEventListener("click", () => {
+  increment();
+  input.value = get();
+});
+
+dec.addEventListener("click", () => {
+  if (input.value > 0) {
+    decrement();
+  }
+  input.value = get();
 });
