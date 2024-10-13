@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7; /* Light background for better contrast */
+    background-color: #89d1c5; /* Light background for better contrast */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,4 +82,70 @@ button:hover {
     border: 1px solid #ccc;
 
 }
+#font-select{
+  margin-top: 10px;
+}
 
+.fontsize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3), 4px 7px 15px rgba(0, 0, 0, 0.2),
+      9px 15px 25px rgba(0, 0, 0, 0.2); */
+    border-radius: 15px;
+    width: 140px;
+    height: 30px;
+    margin-top: 14px;
+    margin-bottom: 15px;
+  }
+  
+  #fontsiz {
+    outline: none;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    font-size: 16px;
+    color: #014805;
+  }
+  
+  #fontsiz {
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    height: 10px;
+    background-color: rgb(189, 241, 214);
+  }
+  
+  .fontsize button {
+    cursor: pointer;
+    font-size:18px;
+  }
+  .fontsize button:nth-last-child(1) {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .fontsize button:nth-child(1) {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  
+  .fontsize button:hover {
+    background-color: #7f7b81;
+  }
+  .fontsize button:nth-last-child(1):active {
+    box-shadow: inset -4px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  .fontsize button:nth-child(1):active {
+    box-shadow: inset 4px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  #decrement{
+    height: 40px;
+    width: 60px;
+    padding-bottom: 31px;
+  }
+  #increment{
+    height: 40px;
+    width: 60px;
+    padding-bottom: 31px;
+  }
