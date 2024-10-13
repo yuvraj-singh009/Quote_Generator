@@ -22,10 +22,15 @@
                 <option value="Impact">Impact</option>
                 <option value="Times New Roman">Times New Roman</option>
                 <option value="Verdana">Verdana</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Brush Script MT">Brush Script MT</option>
             </select>
             
             <label for="font-size-select">Choose font size:</label>
-            <select id="font-size-select">
+           
+            <!-- <select id="font-size-select">
                 <option value="24">24 px</option>
                 <option value="28">28 px</option>
                 <option value="32">32 px</option>
@@ -33,7 +38,13 @@
                 <option value="40">40 px</option>
                 <option value="44">44 px</option>
                 <option value="46"selected>46 px</option>
-            </select>
+            </select> -->
+
+            <div class="fontsize" id="font-size-select">
+                <button id="decrement">-</button>
+                <input type="number" id="fontsiz" value="44" readonly>
+                <button id="increment">+</button>
+              </div>
 
             <!-- Text styling options -->
             <div class="text-styling">
