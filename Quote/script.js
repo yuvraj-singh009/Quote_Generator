@@ -75,8 +75,9 @@ document.getElementById('generate-btn').addEventListener('click', function () {
                 });
 
                 // Add signature text below the quote
+                a=prompt("Enter author name")
                 ctx.font = `${parseInt(selectedFontSize) - 8}px ${selectedFont}`; // Signature font size
-                ctx.fillText('-Yuvraj Singh', mobileWidth / 2, quoteYStart + (quote.length * lineHeight) + 50); // Added 50 for spacing
+                ctx.fillText('-'+a, mobileWidth / 2, quoteYStart + (quote.length * lineHeight) + 50); // Added 50 for spacing
                 
                 // Display the generated image on the output <img> element
                 outputImage.src = canvas.toDataURL('image/png');
